@@ -1,0 +1,25 @@
+{
+    "model_id": "demo",
+    "model_title": "Thrivata Demo",
+    "model_type": "classification",
+    "save_model": true,
+    "overwrite_save": true,
+
+    "dataset": {
+        "data_path": "test.csv",
+        "y_col": "Y"
+    },
+
+    "preprocessing": {
+        "impute_strat": "mean"
+    },
+
+    "model": {
+        "k-folds": {
+            "n_splits": 10,
+            "shuffle": true
+          },
+        "loss": "exponential",
+        "lr": 0.1
+    }
+}
