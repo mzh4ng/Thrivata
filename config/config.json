@@ -2,24 +2,19 @@
     "model_id": "demo",
     "model_title": "Thrivata Demo",
     "model_type": "classification",
-    "save_model": true,
-    "overwrite_save": true,
 
-    "dataset": {
-        "data_path": "test.csv",
-        "y_col": "Y"
-    },
-
-    "preprocessing": {
-        "impute_strat": "mean"
+    "data": {
+        "path": "https://storage.googleapis.com/thumos14_files/UCF101_videos.zip",
+        "dl_dir": "./data/UCF101_subset/"
     },
 
     "model": {
-        "k-folds": {
-            "n_splits": 10,
-            "shuffle": true
-          },
-        "loss": "exponential",
-        "lr": 0.1
+        "batch_size": 8,
+        "num_frames": 8,
+        "resolution": 224,
+        "model_id": "a0",
+        "n_classes": 600,
+        "n_epochs": 2,
+        "lr": 0.001
     }
 }

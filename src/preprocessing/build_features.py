@@ -1,7 +1,9 @@
 import tensorflow as tf
-from datasets.load_datasets import FrameGenerator
+from src.datasets.load_datasets import FrameGenerator
 
-def train_test_split(data):
+def train_test_val_split(data):
+    """Creates training, validation, and test sets from dataset"""
+    
     n_frames = 10
     batch_size = 8
 

@@ -11,8 +11,9 @@ import remotezip as rz
 import tensorflow as tf
 
 def load_dataset(path, dir):
-    URL = 'https://storage.googleapis.com/thumos14_files/UCF101_videos.zip'
-    download_dir = pathlib.Path('./UCF101_subset/')
+    """Downloads dataset from specified URL to specified directory"""
+    URL = path
+    download_dir = pathlib.Path(dir)
     subset_paths = download_ufc_101_subset(URL, 
                             num_classes = 10, 
                             splits = {"train": 30, "val": 10, "test": 10},
